@@ -1,5 +1,4 @@
 
-/* General Settings */
 * {
     margin: 0;
     padding: 0;
@@ -138,40 +137,29 @@ header {
     transform: translateY(-3px);
 }
 
-/* Profile Image - Improved Frame */
+/* Profile Image - Responsive Frame */
 .profile-image {
-    width: 380px;
-    height: 440px;
+    width: 360px;
+    height: 430px;
     flex-shrink: 0;
-    padding: 8px;
+    padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-
     border: 2px solid var(--red);
-    border-radius: 14px;
-
-    background: linear-gradient(
-        145deg,
-        #350b10,
-        #17171b,
-        #29090d
-    );
-
-    box-shadow:
-        0 0 25px rgba(237, 16, 30, 0.25),
-        inset 0 0 15px rgba(237, 16, 30, 0.12);
+    border-radius: 12px;
+    background: linear-gradient(145deg, #251014, #151518, #251014);
+    box-shadow: 0 0 35px rgba(237, 16, 30, 0.25);
+    overflow: hidden;
 }
 
 .profile-image img {
     width: 100%;
     height: 100%;
+    max-width: 100%;
     display: block;
     object-fit: contain;
-    object-position: center;
     border-radius: 8px;
-    filter: contrast(1.08) brightness(1.04);
 }
 
 /* General Sections */
@@ -355,36 +343,21 @@ tr:hover td {
     box-shadow: 0 0 25px rgba(237, 16, 30, 0.18);
 }
 
-/* Project Image - Improved Frame */
+/* Project Image Placeholder */
 .project-image {
     width: 100%;
-    height: 250px;
+    height: 220px;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     position: relative;
-    padding: 8px;
-
-    border-radius: 12px;
-    border: 1px solid rgba(237, 16, 30, 0.25);
-
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
     background:
-        radial-gradient(
-            circle at center,
-            rgba(237, 16, 30, 0.18),
-            transparent 70%
-        ),
-        linear-gradient(
-            135deg,
-            #29292f,
-            #151518,
-            #24242b
-        );
-
-    box-shadow:
-        inset 0 0 25px rgba(237, 16, 30, 0.10),
-        0 4px 15px rgba(0, 0, 0, 0.25);
+        radial-gradient(circle at 50% 50%, rgba(237, 16, 30, 0.13), transparent 65%),
+        linear-gradient(135deg, #24242b, #151518, #202027);
+    box-shadow: inset 0 0 25px rgba(237, 16, 30, 0.07);
 }
 
 .project-image img {
@@ -392,9 +365,7 @@ tr:hover td {
     height: 100%;
     display: block;
     object-fit: contain;
-    object-position: center;
     border-radius: 8px;
-    filter: contrast(1.05) brightness(1.04);
     transition: transform 0.4s ease;
 }
 
@@ -514,8 +485,10 @@ footer p {
     }
 
     .profile-image {
-        width: 300px;
-        height: 360px;
+        width: 280px;
+        max-width: 90%;
+        height: 340px;
+        flex-shrink: 0;
     }
 
     .home-text h1 {
@@ -543,11 +516,6 @@ footer p {
         height: 230px;
     }
 
-    .profile-image {
-        width: 260px;
-        height: 320px;
-    }
-
     .section-title h2 {
         font-size: 27px;
     }
@@ -556,8 +524,16 @@ footer p {
         font-size: 30px;
     }
 
+    .home-text h2 {
+        font-size: 18px;
+    }
+
     .contact-content {
         padding: 20px;
+    }
+
+    .hobby-list {
+        padding: 25px;
     }
 
     th, td {
